@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head lang="en-us">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/salesforce/assets/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+    <script src="/salesforce/assets/jquery/jquery-1.11.3.min.js"></script>
+    <script src="/salesforce/assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="/salesforce/assets/jquery-validate/jquery.validate.min.js"></script>
+    <link rel='stylesheet' href='assets/css/style.css'/>
+<script>
+    $.validator.setDefaults({
+        highlight: function(element) {
+            $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function(element) {
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+ 
+    $( document ).ready(function() {
+        $("#contact_form").validate();
+    });
+</script>
+
+
+
+</head>
+<body>
+
+     <div class="header"></div>
+     <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a>
+        <li><a class="active" href="contact.html">Contact Me</a></li></li>
+     </ul>
+    
+
+
+
+<div class='container'>
+
+    <div class='page'>
+       
+                <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-xs-12 col-md-12">
+                          <div class="panel panel-default">
+                              <div class="panel-heading" style="color: teal;">
+                                  <span class="glyphicon glyphicon-earphone" style="font-size:16px;" aria-hidden="true"></span>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <h3>Contact Me</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <form id="contact_form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                
+            <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+            <!--  If necessary, please modify the charset parameter to specify the        -->
+            <!--  character set of your HTML page.                                        -->
+            <!--  ----------------------------------------------------------------------  -->
+              <!--  ----------------------------------------------------------------------  -->
+              <!--  NOTE: Please add the following <FORM> element to your page.             -->
+              <!--  ----------------------------------------------------------------------  -->
+              
+              
+              <input type="hidden" name="orgid" value="00D2E000000np34">
+              <input type=hidden name="retURL" value="https://trailhead.salesforce.com/">
+              <!--  ----------------------------------------------------------------------  -->
+              <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+              <!--  these lines if you wish to test in debug mode.                          -->
+              <!--  <input type="hidden" name="debug" value=1>                              -->
+              <!--  <input type="hidden" name="debugEmail"                                  -->
+              <!--  value="christina_tarango@apllogistics.com">                             -->
+              <!--  ----------------------------------------------------------------------  -->
+            
+                  <div class="row">
+                            <div class="col-xs-4 col-md-4">
+                                        <div class="form-group">
+              <label for="name">Contact Name<span style="color:red;">*</span></label>
+              <input  id="name" maxlength="40" name="name" size="20" type="text" class="form-control" required/>
+            </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+              <div class="form-group">
+              <label for="email">Email<span style="color:red;">*</span></label>
+              <input  id="email" maxlength="40" name="email" size="20" type="text" class="form-control" required />
+            </div>
+            </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-xs-4 col-md-4">
+                <div class="form-group">
+            
+              <label for="phone">Phone<span style="color:red;">*</span></label>
+              <input  id="phone" maxlength="40" name="phone" size="20" type="text" class="form-control" required />
+            </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+              <div class="form-group">
+              <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" class="form-control" />
+            </div>
+            </div>
+              
+            <div class="col-xs-6 col-md-6">
+              <div class="form-group">
+              <label for="Issue description">Description</label><textarea name="description" class="form-control" rows="5"></textarea><br>
+              
+              <input type="submit" name="submit">
+            </div>
+            </div>
+            </form>
+            
+           
+            </div>
+            </div>
+              
+    </div>
+      
+      </div>
+
+
+
+      </div>
+    </div>
+</div>
+  </div>
+  <div class='footer'>
+
+    <div class="copyright">Copyright &copy;</div>
+    </div>
+</body>
+</html>
